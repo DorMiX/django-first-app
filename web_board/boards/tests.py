@@ -25,9 +25,7 @@ class BoardTopicsTests(TestCase):
 
     def test_board_topics_view_not_found_status_code(self):
         url = reverse('board_topics', kwargs={'pk': 99})
-        print(url)
         response = self.client.get(url)
-        print(response)
         self.assertEquals(response.status_code, 404)
 
     def test_board_topics_url_resolves_board_topics_view(self):
