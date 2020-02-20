@@ -51,3 +51,6 @@ __pycache__/
 
 # Test database files
 *.sqlite3
+
+# VSCode
+.vscode
