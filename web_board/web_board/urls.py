@@ -24,6 +24,7 @@ from accounts import views as accounts_view
 urlpatterns = [
     path('', views.home, name='home'),
     path('signup/', accounts_view.signup, name='signup'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('board/<int:pk>/', views.board_topics, name='board_topics'),
     path('board/<int:pk>/new/', views.new_topic, name='new_topic'),
